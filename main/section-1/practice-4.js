@@ -1,5 +1,8 @@
 'use strict';
 
 module.exports = function collectSameElements(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  const collection = Array.from(
+      new Set(collectionA.filter(item => new Set(objectB.value).has(item.key)))
+  )
+  return collection.map(item=>item.key);
 }

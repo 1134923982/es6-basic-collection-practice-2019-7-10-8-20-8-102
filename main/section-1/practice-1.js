@@ -1,7 +1,5 @@
 'use strict';
 
 module.exports = function collectSameElements(collectionA, collectionB) {
-  return Array.from(
-      new Set(collectionA.filter(item => new Set(collectionB).has(item)))
-  )
+  return collectionA.filter(x=>collectionB.includes(x));
 }
